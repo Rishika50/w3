@@ -1,0 +1,42 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Employee Management</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'about' %}" class="nav-button">&#128214; About</a>
+        <a href="{% url 'feedback_form' %}" class="nav-button">&#128214; Feedback</a>
+    </div>
+    <div class="container">
+        <div class="header">
+            <img src="{% static 'continenta.png' %}" alt="Logo" class="logo">
+            <h1>Employee Management</h1>
+        </div>
+
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Employee details will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <div id="actionButtons">
+            <button onclick="addEmployee()">Add Employee</button>
+        </div>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
