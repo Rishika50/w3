@@ -10,8 +10,8 @@ pipeline {
             steps {
                 dir ('C:/Users/uif95318/Desktop/New folder/Folder/Folder'){
                     script{
-                        sh "pip install django"
-                        sh "python manage.py runserver"
+                        bat "pip install django"
+                        bat "python manage.py runserver"
                     }
 
                 }
