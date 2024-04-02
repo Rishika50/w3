@@ -8,7 +8,7 @@ pipeline {
         }
         stage ("Generate report"){
             steps {
-                dir ('C:/Users/uif95318/Desktop/New folder/Folder/Folder/page'){
+                dir ('C:/Users/uif95318/Desktop/New folder/Folder/Folder'){
                     script{
                         sh "pip install django"
                         sh "python manage.py runserver"
